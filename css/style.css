@@ -159,7 +159,7 @@ header{
 .container__image{
     position: relative;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(254, 220, 219);
     width: 100%;
     padding: 30px;
     z-index: 50;
