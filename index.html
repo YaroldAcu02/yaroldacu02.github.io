@@ -69,21 +69,27 @@
         </div>
     </div>
 
-    <div class="copyright">
-        <h4> © Nahito's Cakes 2021 - 2022 |  Derechos Reservados</h4>
-    </div>
+    <footer>
+        <div class="container__redes">
+            <div class="btn-redes_whatsapp">
+                <a href="https://wa.me/+584141389392" target="_blank"><img src="image/whatsapp.svg" alt=""></a>
+            </div>
 
-    <script>
-        document.querySelectorAll('.image__content img').forEach( image =>{
-            image.onclick = () =>{
-            document.querySelector('.popup__image').style.display = 'block';
-            document.querySelector('.popup__image img').src = image.getAttribute('src');
-           }
-        });
+            <div class="btn-redes_facebook">
+                <a href="" target="_blank"><img src="image/facebook.svg" alt=""></a>
+            </div>
 
-        document.querySelector('.popup__image span').onclick = () =>{
-            document.querySelector('.popup__image').style.display = 'none';
-        }
-    </script>
+            <div class="btn-redes_instagram">
+                <a href="" target="_blank"><img src="image/instagram.svg" alt=""></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h4> © Nahito's Cakes 2021 - 2022 |  Derechos Reservados</h4>
+        </div>
+    </footer>
+    
+
+    <script src="js/image.js"></script>
 </body>
 </html>

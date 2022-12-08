@@ -1,3 +1,4 @@
+/*General*/
 *{
     margin: 0;
     box-sizing: border-box;
@@ -6,6 +7,7 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+/*General*/
 
 /* Barra de Scroll */
 body::-webkit-scrollbar{
@@ -14,34 +16,29 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-thumb{
-	background: linear-gradient(rgb(254,54,119),rgb(254,220,219));
-	/* border-radius: 10px;
-	border: 3px solid #e2e2e2;    */
+	background: linear-gradient(rgb(255,255,255),rgb(254,54,119),rgb(255, 255, 255));
 }
 /* Barra de Scroll */
-.container__nav{
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px;
-}
 
-.img__nav{
-    width: 350px;
-}
-
+/*Barra de navegación*/
 header{
     width: 100%;
     height: 100vh;
 }
 
 .container__header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.4)),
-    url('../image/background_1.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.6)),
+    url('../image/background_3.jpg');
     background-size: cover;
     color: #ffffff;
     width: 100%;
     height: 100vh;
+}
 
+.container__nav{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .nav{
@@ -86,29 +83,23 @@ header{
 }
 
 .nav__icon{
-    width: 40px;
-    
+    width: 40px;    
 }
 
 .nav__links{
-    /* background-color: rgb(0, 0, 0);*/
-    /*background-color: rgb(254, 220, 219); */
     background: rgba( 255, 167, 166, 0.25 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 0;
-
     display: grid;
     align-content: center;
     gap: 2em;
     padding-left: 5%;
-
     transform: var(--state-menu);
     transition: .3s transform;
     z-index: 100;
@@ -127,7 +118,6 @@ header{
 }
 
 @media (min-width:768px) {
-
     .nav{
         --state-hamburguer:scale(0);
         --state-menu: translate(0);
@@ -144,9 +134,7 @@ header{
         position: unset;
         gap: 1.5em;
         grid-auto-flow: column;
-    
         transform: unset;
-
         grid-column: -2/-1;
         grid-row: 1/2;
     }
@@ -154,7 +142,6 @@ header{
     .nav__link{
         font-size: 1rem;
         letter-spacing: none;
-        
     }
 }
 
@@ -170,8 +157,6 @@ header{
     position: relative;
     min-height: 100vh;
     background: linear-gradient(rgba(255, 255, 255), rgba(255, 167, 166, 0.7), rgba(255, 255, 255)), url(../image/torta_8.jpg);
-    /* background: linear-gradient(rgb(255,255,255, rgb(65, 129, 203)); */
-    /* background-color: rgba(212, 224, 238, 0.2); */
     width: 100%;
     padding: 30px;
     z-index: 50;
@@ -212,13 +197,11 @@ header{
     transition: .2s linear;
     border: 12px solid #ffffff;
     border-radius: 5px;
-    
 }
 
 .container__image .image__content .image:hover img{
     transform: scale(1.02);
     border-radius: 5px;
-    
 }
 
 .container__image .popup__image{
@@ -226,13 +209,10 @@ header{
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 1, 0.6);
-    
     width: 100%;
     height: 100%;
     z-index: 100;
-    display: none;
-
-    
+    display: none;   
 }
 
 .container__image .popup__image span{
@@ -256,9 +236,57 @@ header{
     height: 580px;
     object-fit: cover;
     border: 10px solid #ffffff;
-
-    
     box-shadow: #000000 1px 0px 50px;
+}
+
+.container__redes{
+    background-color: #898989;
+}
+
+.btn-redes_instagram,
+.btn-redes_whatsapp,
+.btn-redes_facebook {
+	height: 50px;
+	width: 50px;
+	border-radius: 40%; 
+	background-color: #0000003b; 
+	padding: 10px 10px;
+	position: fixed;
+	right: 20px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+	cursor: pointer;
+}
+
+.btn-redes_whatsapp {
+	bottom: 20px;
+}
+
+.btn-redes_facebook {
+	bottom: 80px;
+}
+
+.btn-redes_instagram {
+	bottom: 140px;
+}
+
+.btn-redes_whatsapp:hover {
+	background-color: #36a52c8c;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+} 
+
+.btn-redes_facebook:hover{
+	background-color: #2c42a58c;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+
+.btn-redes_instagram:hover {
+	background-color: #a52c9f8c;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
 }
 
 .copyright{
@@ -267,17 +295,11 @@ header{
     font-family: 'Montserrat', sans-serif;
 }
 
-
 @media (max-width:1024px){
-    /* header{
-        height: 500px;
-    } */
-
     .container__header{
         width:100%;
         height: 600px;
     }
-
     
     .span > h1{
         padding: 30px 0;
@@ -400,7 +422,6 @@ header{
 
     .span > h1{
         padding: 10px 0;
-
         text-align: center;
         font-size: 22px;
         color: rgb(77, 77, 77);
@@ -411,6 +432,5 @@ header{
         left: 41%;
         width: 280px;
         height: 280px;
-        
     }
 }
