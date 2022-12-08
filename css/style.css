@@ -93,7 +93,11 @@ header{
 .nav__links{
     /* background-color: rgb(0, 0, 0);*/
     /*background-color: rgb(254, 220, 219); */
-    background-color: rgba(255, 167, 166, 0.7);
+    background: rgba( 255, 167, 166, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: fixed;
     top: 0;
     bottom: 0;
@@ -116,9 +120,13 @@ header{
 }
 
 .nav__link{
-    color: #fff;
+    background-color: rgba(240, 248, 255, 0.6);
+    padding: 5px;
+
+    font-weight: 300;
+    color: rgb(71, 71, 71);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     letter-spacing: 2px;
 }
 
@@ -165,7 +173,7 @@ header{
 .container__image{
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255), rgb(255, 167, 166), rgba(255, 255, 255));
+    background: linear-gradient(rgba(255, 255, 255), rgba(255, 167, 166, 0.7), rgba(255, 255, 255)), url(../image/torta_8.jpg);
     /* background: linear-gradient(rgb(255,255,255, rgb(65, 129, 203)); */
     /* background-color: rgba(212, 224, 238, 0.2); */
     width: 100%;
@@ -186,7 +194,7 @@ header{
 .container__image .image__content{
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 35px;
     justify-content: center;
     padding: 10px;
 }
@@ -197,6 +205,8 @@ header{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
+    border-radius: 5px;
+
 }
 
 .container__image .image__content .image img{
@@ -205,10 +215,13 @@ header{
     object-fit: cover;
     transition: .2s linear;
     border: 12px solid #ffffff;
+    border-radius: 5px;
 }
 
 .container__image .image__content .image:hover img{
     transform: scale(1.02);
+    border-radius: 5px;
+
 }
 
 .container__image .popup__image{
@@ -249,6 +262,7 @@ header{
 .copyright{
     text-align: center;
     padding: 20px 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -324,6 +338,10 @@ header{
         height: 340px;
         
     }
+
+    .container__image h1{
+        font-size: 30px;
+    }
 }
 
 @media (max-width:380px){
@@ -340,7 +358,7 @@ header{
         padding: 15px 0;
 
         text-align: center;
-        font-size: 22px;
+        font-size: 18px;
         color: rgb(77, 77, 77);
         font-weight: 500;
     }
